@@ -1,0 +1,18 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+            <lightning-button label ='Show All Opportunity Records' onclick={handleOpportunityOnClick}> 
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+            <template for:each={showAllOppRecord} for:item="acc">
+                <lightning-card  key = {acc.Id} con-name="standard:opportunity"> 
+                    <li key={account.Id}> {acc.Name}, {acc.CloseDate}, {acc.StageName}, {acc.Amount}</li>
+                </lightning-card>
+            </template>
+     <!--<lightning-datatable key-field="id" data={showAllOppRecord} columns={cols}> </lightning-datatable>-->  
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

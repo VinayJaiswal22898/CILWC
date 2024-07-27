@@ -1,0 +1,15 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="4">
+            <lightning-layout-item>
+                <lightning-input placeholder="Enter Account Name" onchange={handleAccountnameOnChange}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-datatable data={allAccountRecords} columns={columns} key-field="id">
+            </lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

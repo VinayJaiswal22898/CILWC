@@ -1,0 +1,5 @@
+<template>
+    <template  for:each={nameList} for:item="name"      for:index="index">  <!-- name is variable in item index is array index -->
+       <li key={name}> {index} {name}</li> 
+    </template>
+</template>

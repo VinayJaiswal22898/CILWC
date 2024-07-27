@@ -1,0 +1,60 @@
+<template>
+    <div>
+    <lightning-card title="" icon-name="standard:account" footer="copy right reserved" variant="brand">
+        
+        <div slot="title" >
+          Account <br/>
+          <b>Vinay Jaiswal</b>
+        </div>
+
+            <div slot ='actions'>
+                <lightning-button label="Follow" icon-name="utility:add"></lightning-button> &nbsp;
+                <lightning-button-group>
+                    <lightning-button  label= "new Contact"  variant="netural" ></lightning-button>
+                    <lightning-button  label= "new Lead" variant="neutral" ></lightning-button>
+                    <lightning-button  label= "new Note"  variant="neutral" ></lightning-button>
+                    <lightning-button  label= "new Case"  variant="neutral" ></lightning-button>
+                    <lightning-button-menu alternative-text="select the menu item" menu-alignment="auto">
+                        <lightning-menu-item label="new opp"></lightning-menu-item>
+                        <lightning-menu-item label="Sharing" value="sharing"></lightning-menu-item>
+                        <lightning-menu-item label="Submit For Approval" value="Submit"></lightning-menu-item>
+                        <lightning-menu-item label="Edit" value="Edit"></lightning-menu-item>
+                        <lightning-menu-item label="Delete" value="Delete"></lightning-menu-item>
+                    </lightning-button-menu>
+                </lightning-button-group>
+            </div>
+            
+            <div slot="footer">
+                <lightning-badge label="new Customer"></lightning-badge>
+                <lightning-badge label="Account"></lightning-badge>
+                <lightning-badge label="Premium Customer"></lightning-badge>
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <th> Account Name</th>
+                        <th> Rating</th>
+                        <th> Phone</th>
+                        <th> Priority</th>
+                        <th> Website</th>
+                        <th>Industry Name</th>
+                        <th>Fax Number</th>
+                        <th>Billing City</th>
+                        <th>Active Status</th>
+                    </tr>
+                    <tr>
+                        <td>Ramu</td>
+                        <td>Hot</td>
+                        <td>7777864672</td>
+                        <td>Hight</td>
+                        <td>www.ok.com</td>
+                        <td>Ram kll</td>
+                        <td>42743907</td>
+                        <td>yes</td>
+                    </tr>
+                </table>
+            </div>
+    </lightning-card>
+</div>
+</template>

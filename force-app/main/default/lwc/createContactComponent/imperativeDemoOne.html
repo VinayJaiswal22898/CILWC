@@ -1,0 +1,25 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item szie="3"></lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-input label = 'First Name' placeholder="Enter First Name" onchange={handleFirstName}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="3">
+            <lightning-input label = 'Last Name' placeholder="Enter First Name" onchange={handleLastName} required></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="3">
+            <lightning-input  label = 'Phone' placeholder="Enter Phone Number" onchange={handlePhoneNumber}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="3">
+            <lightning-input label = 'Email Id' placeholder="Enter Email Id" onchange={handleEmailId} required=""></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+            <lightning-button label="Create Contact" variant="brand" onclick={handleOnClick}></lightning-button>
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>

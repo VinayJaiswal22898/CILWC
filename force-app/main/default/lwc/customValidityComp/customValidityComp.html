@@ -1,0 +1,15 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="3" class="slds-m-right_small">
+            <lightning-input placeholder="Enter Phone Number" name="phone" onchange={handlePhoneOnChnage}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="3" class="slds-m-right_small">
+            <lightning-input placeholder="Enter  Email" name="email" onchange={handleEmailOnChnage}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+            <lightning-button variant="brand" label="submit" onclick={validate}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

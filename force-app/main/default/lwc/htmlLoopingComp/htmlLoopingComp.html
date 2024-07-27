@@ -1,0 +1,10 @@
+<template>
+    <lightning-layout multiple-rows>
+        <template for:each={messages} for:item="message" for:index="index">
+            <lightning-layout-item size="5" class="slds-box slds-m-around_small slds-text-align_center" key={message}>
+                {message}
+            </lightning-layout-item>
+        </template>
+        
+    </lightning-layout>
+</template>

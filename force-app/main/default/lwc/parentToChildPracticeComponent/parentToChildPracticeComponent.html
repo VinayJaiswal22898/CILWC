@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="4"></lightning-layout-item>
+        <lightning-layout-item size="4">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12">
+                    <lightning-input placeholder="Write Text" onchange={handleOnChnage} required="true">
+                    </lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                       <c-child-practice-component child-result= {writeText}  child-text ={result}></c-child-practice-component>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+        <lightning-layout-item size="4"></lightning-layout-item>
+    </lightning-layout>
+</template>

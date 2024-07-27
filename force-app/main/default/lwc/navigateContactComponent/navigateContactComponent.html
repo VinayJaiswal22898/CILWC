@@ -1,0 +1,11 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="6">
+    <lightning-card title="Contact Navigation">
+        <lightning-input placeholder="Enter Phone Number" onchange={handlePhoneOnChange}></lightning-input>
+        <lightning-input placeholder="Enter Email Id" onchange={handleEmailOnChange}></lightning-input>
+        <lightning-button label="Navigate To Contact Page" onclick={navigateToContact}></lightning-button>
+    </lightning-card>
+</lightning-layout-item>
+    </lightning-layout>
+</template>

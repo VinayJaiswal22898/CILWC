@@ -1,0 +1,44 @@
+<template>
+    <lightning-layout horizontal-align="center" multiple-rows>
+        <lightning-layout-item size="4">
+            <lightning-input placeholder="search account Name using async" onchange={handleSearchOnChangeAsync}>
+            </lightning-input>
+        </lightning-layout-item>
+        <lightning-button label="asyncClick"  variant="brand"  onclick={handleSearchAsync} class= "lds-m_around"> </lightning-button>
+    </lightning-layout>
+    
+    <lightning-layout horizontal-align="center" multiple-rows>   
+        <lightning-layout-item size="4">
+            <lightning-input placeholder="search account Name using promise" onchange={handleSearchOnChangePromise}>
+            </lightning-input>
+            <lightning-button label="promseClick" variant="brand" onclick={handleSearchPromise}> </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+            <template lwc:if={resultFound}>
+                <lightning-formatted-text value='result found'> </lightning-formatted-text>
+            </template>
+            <template lwc:else>
+                <lightning-formatted-text value="result not found"> </lightning-formatted-text>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout>
+        <lightning-layout-item>
+            <template lwc:if={acounts}>
+                <template for:each={acounts} for:item="account">
+                    <li key={account.Id}> {account.Name}</li>
+                </template>
+            </template>
+            <template lwc:elseif={error}>
+                <h1>
+                    {error}
+                </h1>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>

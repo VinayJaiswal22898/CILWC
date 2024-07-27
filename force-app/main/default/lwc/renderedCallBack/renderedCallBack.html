@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+<template lwc:if={contacts}>
+            <template for:each={contacts} for:item="contact">
+                <p key={contact.id} > {contact.Name}  {contact.Email}  </p>
+            </template>
+        </template>
+        <lightning-datatable
+                key-field="id"
+                data={contacts}
+                columns={columns}>
+        </lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

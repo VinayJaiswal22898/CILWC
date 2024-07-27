@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-input lable="First Name" placeholder="First Name" onchange={handleFirstName}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-input lable="Last Name" placeholder="Last Name" onchange={handleLastName}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-input lable="Phone" placeholder="Phone" onchange={handlePhone}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-input lable="Email" placeholder="Email" onchange={handleEmail}></lightning-input>
+        </lightning-layout-item>
+        <lightning-button label="sumit" onclick={publishData} variant="brand"></lightning-button>
+    </lightning-layout>
+</template>

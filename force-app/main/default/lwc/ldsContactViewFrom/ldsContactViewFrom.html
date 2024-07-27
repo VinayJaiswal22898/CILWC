@@ -1,0 +1,27 @@
+<template>
+    <lightning-layout >
+        <lightning-layout-item size="4" class="slds-box">
+            <b>This is Lighting Record Edit Form </b>
+            <lightning-record-form object-api-name="Contact" record-id={recordId} layout-type="Full" columns="2" density="compact" mode="readonly"> </lightning-record-form> <!--fields={fields}  layout-type="Full" or Compact-->
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="4" class="slds-box">
+            <b>This is Lighting Record Edit Form </b>
+            <lightning-record-edit-form object-api-name="Contact" record-id={recordId}  >
+                <lightning-input-field field-name={nameField}></lightning-input-field>
+                <lightning-input-field field-name={phoneField}></lightning-input-field>
+                <lightning-button type="submit" label="Save" variant="brand"></lightning-button>
+            </lightning-record-edit-form>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="4" class="slds-box">
+            <b>This is Lighting Record View Form </b>
+            <lightning-record-view-form object-api-name="Contact" record-id={recordId}  >
+                <lightning-output-field field-name={nameField}></lightning-output-field>
+                <lightning-output-field field-name={phoneField}></lightning-output-field>
+            </lightning-record-view-form>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

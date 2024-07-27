@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout class="slds-box">
+        <lightning-layout-item>
+            This is child component : {childCom}
+        </lightning-layout-item>
+        <lightning-layout-item >
+            <lightning-button label="showMessage" variant="brand" onclick={showMessage}> </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout class="slds-box">
+        <lightning-layout-item>
+            <lightning-button label="sendMessage" variant="brand" onclick={sendMessage}>
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

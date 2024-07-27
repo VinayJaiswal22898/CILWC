@@ -1,0 +1,55 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item >
+            <lightning-button label="Button-Base"
+            name="btnBase"
+            variant="Base" class="slds-m-left_x-small"
+            icon-name="utility:warning"
+            onclick={handleOnClick}>
+            </lightning-button> &nbsp;
+        </lightning-layout-item>
+            <lightning-layout-item >
+                <lightning-button label="Button-Netural"
+                name="btnNatural"
+                variant="Netual" class="slds-m-left_x-small"
+                onclick={handleOnClick}>
+                </lightning-button> &nbsp;
+            </lightning-layout-item>
+            <lightning-layout-item >
+                <lightning-button label="Button-Brand"
+                name="btnBrand"
+                variant="brand" class="slds-m-left_x-small" 
+                onclick={handleOnClick}>
+                </lightning-button>&nbsp;
+            </lightning-layout-item>
+            <lightning-layout-item >
+                <lightning-button label="Button-Destructive"
+                name="btnDestructive"
+                variant="destructive"
+                class="slds-m-left_x-small"
+                onclick={handleOnClick}>
+                </lightning-button>&nbsp;
+            </lightning-layout-item>
+            <lightning-layout-item >
+                <lightning-button label="Button-Inverse"
+                name="btnInverse"
+                icon-name="utility:new"
+                variant="inverse" class="slds-m-left_x-small" 
+                onclick={handleOnClick}>
+                </lightning-button>&nbsp;
+            </lightning-layout-item>
+            <lightning-layout-item >
+                <lightning-button label="Button-Success"
+                name="btnInverse"
+                icon-name="utility:down"
+                variant="success" class="slds-m-left_x-small" 
+                onclick={handleOnClick}>
+                </lightning-button>&nbsp;
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout horizontal-align="center" vertical-align="center">
+            <lightning-layout-item >
+                The label of the button that was clicked is: <b> {showButtonName}</b>
+            </lightning-layout-item>
+        </lightning-layout>
+</template>

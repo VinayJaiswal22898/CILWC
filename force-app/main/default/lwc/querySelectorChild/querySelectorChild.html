@@ -1,0 +1,24 @@
+<template>
+ <lightning-layout horizontal-align="center">
+    <lightning-layout-item  size='4' class="slds-m-around_xx-small">
+        <lightning-input placeholder="First Name" onchange={handleFirstName} ></lightning-input>
+    </lightning-layout-item>
+    <lightning-layout-item  size='4' class="slds-m-around_xx-small">
+        <lightning-input placeholder="Last Name" onchange={handleLastName} ></lightning-input>
+    </lightning-layout-item>
+ </lightning-layout>
+ <lightning-layout horizontal-align="center">
+    <lightning-layout-item  size='4' class="slds-m-around_xx-small">
+        <lightning-input placeholder="Email" onchange={handleEmail} ></lightning-input>
+    </lightning-layout-item>
+    <lightning-layout-item  size='4' class="slds-m-around_xx-small">
+        <lightning-input placeholder="Addresss" onchange={handleAddress} ></lightning-input>
+    </lightning-layout-item>
+ </lightning-layout>
+ <lightning-layout horizontal-align="center" class="slds-m-around_xx-small">
+    <lightning-layout-item size="1">
+      <lightning-button label="Submit" variant="brand" onclick={handleOnClick}></lightning-button>
+    </lightning-layout-item>
+ </lightning-layout>
+
+</template>

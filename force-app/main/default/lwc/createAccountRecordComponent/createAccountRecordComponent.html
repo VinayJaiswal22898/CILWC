@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Create Account Record with createRecord method" icon-name="standard:account"> </lightning-card>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-medium">
+            <lightning-card title="New Account Record" icon-name="standard:account" >
+                    <lightning-input label="Account Name" placeholder="Enter Account Name" onchange={handleNameOnChange}></lightning-input>    
+                    <lightning-input label ='Phone' placeholder="Enter Your Phone Number" onchange={handlePhoneOnChange}></lightning-input>
+                    <lightning-input label = 'Rating' aria-placeholder="Select rating" onchange={handleRatingOnChange}></lightning-input>
+                    <lightning-button label="Save Record" variant="brand"  onclick={handleOnClick}></lightning-button>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

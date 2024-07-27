@@ -1,0 +1,18 @@
+<template>
+    <lightning-layout horizontal-align="center" pull-to-boundary="small">
+    <lightning-layout-item size="8">
+     <lightning-Input  label="Enter Phone Number" placeholder="search Contact" onchange={handlePhoneOnChnage}></lightning-input>
+    </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center" pull-to-boundary="small">
+        <lightning-layout-item size="8">
+         <lightning-Input  label="Enter Email Number" placeholder="search Contact" onchange={handleEmailOnChnage}></lightning-input>
+        </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-datatable key-field="Id" columns={columns} data={contacts} hide-checkbox-column="true"> </lightning-datatable>
+        </lightning-layout>
+        <lightning-layout if:true={error}>
+            {error}
+        </lightning-layout>
+</template>

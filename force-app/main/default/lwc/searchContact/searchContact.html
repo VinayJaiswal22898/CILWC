@@ -1,0 +1,37 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="12">
+             <lightning-input placeholder="Search Here..." onchange={HandleOnChange}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="12">
+                <lightning-card>
+                    <!--<template for:each={contacts.data} for:item="con"> 
+                        <li key = {con.id}> 
+                            Name : {con.name}  Phone : {con.phone}
+                        </li>
+                    </template>-->
+                    <lightning-datatable key-field="id"
+                    data = {contacts.data}
+                    columns={columns}>
+                    </lightning-datatable>
+                </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout if:true={contacts.error}>
+        {contacts.error}
+    </lightning-layout>
+</template>
+<!--<lightning-card title="Retrieve contact to related to account" icon-name="standard:account">
+        <div class = "slds-var-p-around_small">
+            <lightning-input label="Contact related to Account"
+                                         value = {recordId}>
+            </lightning-input>
+            <template lwc:if={contacts.data}>
+           <template for:each={contacts.data} for:item="con">
+             <p key={con.Id}>{con.LastName}</p>
+           </template>
+            </template> 
+        </div>
+    </lightning-card>-->

@@ -1,0 +1,21 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="6">
+          <lightning-input label="Last Name " placeholder="Enter Last Name" required="true" onchange={handleLastNameOnChnage}>
+          </lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <lightning-input label="First Name " placeholder="Enter Your First Name" onchange={handleFirstNameOnChnage}>
+            </lightning-input>
+          </lightning-layout-item>
+    </lightning-layout>
+        
+
+    <lightning-layout horizontal-align="center" class="slds-m-top_large">
+        <lightning-layout-item size="6">
+         <lightning-button icon-name="utility:record_create" label="Submit" variant="brand" onclick={handleCreateContact}>
+         </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+    
+</template>

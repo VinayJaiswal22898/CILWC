@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+   <masterLabel>MyMessageChannel</masterLabel>
+   <isExposed>true</isExposed>
+   <description>This Lightning Message Channel is used to broadcast data like fristName, lastname , phone, email</description>
+
+   <lightningMessageFields>
+       <fieldName>firstName</fieldName>
+       <description>First Name To Send</description>
+   </lightningMessageFields>
+
+   <lightningMessageFields>
+    <fieldName>lastName</fieldName>
+    <description>Last Name To Send</description>
+</lightningMessageFields>
+
+<lightningMessageFields>
+    <fieldName>phone</fieldName>
+    <description>Phone To Send</description>
+</lightningMessageFields>
+
+<lightningMessageFields>
+    <fieldName>email</fieldName>
+    <description>Email Name To Send</description>
+</lightningMessageFields>
+</LightningMessageChannel>

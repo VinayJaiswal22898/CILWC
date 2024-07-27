@@ -1,0 +1,39 @@
+<template>
+  <lightning-layout horizontal-align="center" multiple-rows>
+    <lightning-layout-item class="slds-box" size="5">
+
+      <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+          <lightning-card variant="narrow" title="hey siri" icon-name="utility:chat">
+          </lightning-card>
+        </lightning-layout-item>
+      </lightning-layout>
+
+      <lightning-layout>
+        <lightning-layout-item size="12" class="slds-scrollable" style="height:20rem">
+          <template for:each={inboundmessages} for:item="message">
+            <lightning-layout key={message.message} multiple-rows>
+              <lightning-layout-item size="12" if:true={message.inbound}>
+                <c-inbound-message inmessage={message.Boss}>
+                </c-inbound-message>
+              </lightning-layout-item>
+              <lightning-layout-item size="12" if:false={message.inbound} class="slds-p-left_large">
+                <c-outbound-message outmessage={message.Employee}>
+                </c-outbound-message>
+              </lightning-layout-item>
+            </lightning-layout>
+          </template>
+        </lightning-layout-item>
+      </lightning-layout>
+      <lightning-layout horizontal-align="center" multiple-rows>
+        <lightning-layout-item size="8">
+          <lightning-input variant="brand" placeholder="  typing.............."> </lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="3">
+          <lightning-button variant="success" title="Send" icon-name="utility:send" class="slds-m-around_small"
+            onclick={handleOnClick} stretch></lightning-button>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

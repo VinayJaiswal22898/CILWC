@@ -1,0 +1,13 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item class="slds-var-m-horizontal_medium">
+            <lightning-card title="Navigation " >
+            <lightning-button label="Create Contact"  variant="brand" onclick={createContactOnClick} > </lightning-button> &nbsp;
+            <lightning-button label ="View Contact" variant="brand" onclick={viewContactOnClick}></lightning-button>&nbsp;
+            <lightning-button label ="Edit Contact" variant="brand" onclick={editContactOnClick}></lightning-button> 
+            <lightning-button label="View Contacts" variant="brand" onclick={listViewContacts}></lightning-button>
+            <lightning-button label="View Realted Contacts" variant="brand" onclick={viewRelatedContactOfAccount}></lightning-button>
+        </lightning-card>
+    </lightning-layout-item>
+    </lightning-layout>
+</template>

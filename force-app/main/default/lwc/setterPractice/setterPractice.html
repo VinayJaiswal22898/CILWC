@@ -1,0 +1,27 @@
+<template>
+    <lightning-layout horizontal-align = 'center'>
+        <lightning-layout-item>
+            <lightning-combobox options={options} 
+                                                   placeholder="Select Gender"
+                                                   onchange={handleGender}>
+            </lightning-combobox>
+        </lightning-layout-item>
+
+            <lightning-layout-item lwc:if={showFirstName}>
+                <lightning-input placeholder="Enter your First Name"
+                onchange={handleFirstName}>
+            </lightning-input>
+            </lightning-layout-item>
+
+        <lightning-layout-item lwc:if={showLastName}>
+            <lightning-input placeholder="Enter Your Last Name"
+                                        onchange={handleLastName}>
+            </lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item>
+            {formattedFirsNameLatName}
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>

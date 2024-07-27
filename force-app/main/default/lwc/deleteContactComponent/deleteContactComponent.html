@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="4">
+           <lightning-input placeholder="Enter Email" onchange={handleEmailOnChange} > </lightning-input>
+           <lightning-input placeholder="Enter Phone Number" onchange={handlePhoneOnChange} ></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="4">
+            <lightning-button label="Delete Contact Record" variant="brand" onclick={handleDeleteContactOnClick}>
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

@@ -1,0 +1,63 @@
+<template>
+    <!--
+    <lightning-layout horizontal-align="start" multiple-rows="true">
+        hello lightning layout center start 
+    </lightning-layout>
+    <lightning-layout horizontal-align="center" multiple-rows="true"> 
+        hello lightning layout center center 
+    </lightning-layout>
+
+    <lightning-layout horizontal-align="end" multiple-rows="true">
+        hello lightning layout center end 
+    </lightning-layout>
+    <lightning-layout horizontal-align="stretch" multiple-rows="true">
+        hello lightning layout center stretch 
+    </lightning-layout>
+-->
+<!--   
+<lightning-layout horizontal-align="center">
+      <lightning-layout-item size="4" alignment-bump="right" >
+        hello alignment bump right attribute 
+      </lightning-layout-item>
+      <lightning-layout-item size="4" flexibility="auto" padding="around-small">
+        auto and around small
+      </lightning-layout-item>
+      <lightning-layout-item  size="4" flexibility="auto" padding="around-small">
+        auto and around small
+      </lightning-layout-item>
+    </lightning-layout>
+    --> 
+
+<lightning-layout>
+    <lightning-layout-item size="4"></lightning-layout-item>
+    <lightning-layout-item size="4">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <lightning-input label="Enter Your Name" 
+                                             placeholder="FirstName"
+                                             type="text" >
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                  <lightning-input label="Enter Your Email" 
+                                               type ="email" 
+                                               placeholder="Email"
+                                               required="true">
+                  </lightning-input>
+                  <lightning-combobox label="Select Gender"  
+                                               placeholder="Gender"
+                                                 options={options}
+                                                 oncchnage={handleGender}
+                                                 required="true"
+                                               ></lightning-combobox>
+                  <lightning-input label="Password" 
+                                               placeholder="Password" 
+                                               type="password">
+                  </lightning-input>
+                  <lightning-button label="Submit" ></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-layout-item>
+    <lightning-layout-item size="4"></lightning-layout-item>
+</lightning-layout>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-layout multiple-rows="true"
+      horizontal-align="center"
+    >
+    <lightning-layout-item  size="12">
+        Life Cycle Hook Parent
+      <lightning-button 
+      variant="Brand"
+      label="Show/Hide" 
+      onclick={handleClick} 
+    ></lightning-button>
+    </lightning-layout-item>
+    </lightning-layout>
+   
+  <lightning-layout multiple-rows="true"
+    horizontal-align="center"
+    pull-to-boundary="small"
+  >
+  <lightning-layout-item size="12">
+    <template if:true={isVisible}>
+        <c-life-cycle-hook-child-component></c-life-cycle-hook-child-component>
+     </template>
+  </lightning-layout-item>
+   
+  </lightning-layout>
+</template>

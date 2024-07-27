@@ -1,0 +1,23 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item lwc:if={visibility}>
+         layout item 1 visibility
+        </lightning-layout-item>
+        <lightning-layout-item lwc:elseif={visibility2}>
+            layout item 2 elseif
+        </lightning-layout-item>
+        <lightning-layout-item lwc:else>
+            layout item 3 (else)
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
+
+<!--
+updated one 
+lwc : if 
+lwc : else
+
+this is old way 
+if : true 
+if: false  
+-->

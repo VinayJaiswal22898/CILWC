@@ -1,0 +1,37 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="4"> First Part out of 12 </lightning-layout-item>
+        <lightning-layout-item size="4"> second Part out of 12
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12"> 
+                 <lightning-input label="Enter First Number" type="number"
+                                             onchange={handleFirstNumber}
+                                             onblur={handleOnBlur}
+                                             onfocus={handleOnFocus}></lightning-input>    
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input label="Enter Second Number" type="number"
+                                                 onchange={handleSecondNumber}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" padding="around-large">
+                    <lightning-button label="Addition" variant="brand"
+                    onclick={handleAddOnClick}></lightning-button>
+                    <lightning-button label="Subtraction" variant="brand"
+                    onclick={handleSubClick}></lightning-button>
+                    <lightning-button label="Multiplication" variant="brand"
+                    onclick={handleMulClick}></lightning-button>
+                    <lightning-button label="Division" variant="brand"
+                    onclick={handleDivClick}></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" if:true={result}> 
+                    <c-result-component result-received = {result} ></c-result-component>
+                    <c-result-comp result = {result} message-result-comp = {message}></c-result-comp>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" if:false={result}>
+                    plase give valid number
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+        <lightning-layout-item size="4"> third  Part out of 12</lightning-layout-item>
+    </lightning-layout>
+</template>

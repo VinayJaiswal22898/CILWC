@@ -1,0 +1,19 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item class ='slds-m-right_small'>
+            <lightning-combobox options ={options} placeholder="Select Country" 
+                                                   onchange={handleCountry}>
+            </lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item lwc:if={showPhoneNumberSection} 
+                                                   class ="slds-m-left_small">
+            <lightning-input placeholder="Enter phone Number"
+                                         onchange={handlePhone}></lightning-input>
+           </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout-item  lwc:if={showPhoneNumberSection} horizontal-align ="center" class ="slds-m-top_medium">
+         <lightning-layout-item size = "3" class = "slds-box slds-text-align_center">
+            {formattedPhoneNumber}
+         </lightning-layout-item>
+    </lightning-layout-item>
+</template>

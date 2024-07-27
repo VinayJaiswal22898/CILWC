@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout class="slds-box slds-m-around_small slds-text-align_center">
+        <lightning-layout-item>
+          <lightning-formatted-rich-text value={messageToBeShown}></lightning-formatted-rich-text>  
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout class="slds-box slds-m-around_small slds-text-align_center slds-m-top_small">
+        <lightning-layout-item size="5">
+            <lightning-input placeholder="First Name" onchange={firstNameOnChnage}> </lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="5" alignment-bump ="left">
+            <lightning-input placeholder="last Name" onchange={lastNameOnChnage}> </lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
