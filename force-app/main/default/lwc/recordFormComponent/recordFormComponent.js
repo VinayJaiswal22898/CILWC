@@ -6,7 +6,9 @@ export default class RecordFormComponent extends LightningElement {
  fileds  = [Name_Field , Phone_Field];
     @api recordId;
     @api objectApiName;
-
+connectedCallback(){
+    console.log('hello');
+}
     handleONSuccess(){
         const notification = new ShowToastEvent({
             title: 'Success',
